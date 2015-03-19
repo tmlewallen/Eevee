@@ -1,0 +1,32 @@
+# This program will print the argument from every call to "countDown"
+# When the argument = 0, countDown returns the string "DONE"
+# Second recursive demo is a naive fibonacci calculator.
+
+Main.run(){
+	func countDown(x){
+		var returnVal = 0;
+		print(x);
+		if (x > 0){
+			returnVal = countDown(x - 1);
+		}
+		else{
+			returnVal = "DONE";
+		}
+		return returnVal;
+	};
+	print(countDown(100));
+
+	func naiveFib(x){
+		var returnVal = 0;
+		#print(x);
+		if (x <= 1){
+			returnVal = x;
+		}
+		else{
+			returnVal = naiveFib(x - 1) + naiveFib(x - 2);
+		}
+		return returnVal;
+	};
+
+	print("fib of 6 is " + naiveFib(6));
+}

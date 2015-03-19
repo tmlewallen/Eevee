@@ -1,0 +1,19 @@
+Main.run(){
+	var list = cons(1,cons(2,cons(3,cons(4,cons(5,cons(6,NULL))))));
+	func getFromList(list,ndx){
+		var curr = 0;
+		while (curr < ndx){
+		    list = cdr(list);
+		    curr = curr + 1;
+		}
+		return car(list);
+	};
+	func printList(list,len){
+		func modPrint(x){
+			print("Element: " + getFromList(list,x));
+		};
+		forLoopPassIndex(0,len,1,modPrint);
+	};
+	printList(list,6);
+
+}

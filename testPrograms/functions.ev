@@ -1,0 +1,19 @@
+Main.run(){
+	func singleArgFunctionCaller(f,arg){
+		f(arg);
+	};
+	singleArgFunctionCaller(print,"IT WORKED!");
+
+	#Following commented code is in main.lib
+	#func forLoopPassIndex(start,end,delta,f){
+	#	#print(f);
+	#	while (start < end){
+	#		f(start);
+	#		start = start + delta;
+	#	}
+	#};
+	func morePrint(x){
+		print("Printing... " + x);
+	};
+	forLoopPassIndex(0,22,2,morePrint);
+}

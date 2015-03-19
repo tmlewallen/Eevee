@@ -1,0 +1,32 @@
+# First loop iteratively calculates x^y
+#
+
+Main.run(){
+	var x = 2;
+	var y = 5;
+	var original_y = y;
+	var pow = x;
+	while (NOT y == 0){
+		print("x = " + x);
+		x = x * pow;
+		y = y - 1;
+	}
+	var str = intToStr(pow);
+	str = str + "^" + original_y;
+	str = str + " = " + x;
+	print(str);
+
+	func fact(i){
+		var j = 1;
+		var f = 1;
+		while (j <= i){
+			print(f);
+			f = j * f;
+			j = j + 1;
+		}
+		return f;
+	};
+
+	print("5! is " +fact(5));
+
+}

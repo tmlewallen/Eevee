@@ -1,0 +1,29 @@
+
+var tester = 5 {
+	var field1 = "Field 1";
+	var field2 = "Field 2";
+	GET:func(val){
+		var returnVal = FALSE;
+		if (val == 1){
+			returnVal = field1;
+		}
+		else{
+			returnVal = field2;
+		}
+		return returnVal;
+	};
+	SET:func(val){
+		return val;
+	};
+};
+
+
+Main.run(){
+	stack = 1;
+	stack = 2;
+	stack = 3;
+	print(stack = "pop");
+	print(stack = "pop");
+	print(stack = "pop");
+	print(stack = "pop");
+}

@@ -1,0 +1,68 @@
+Main.run(){
+	var f = FALSE;
+	var t = TRUE;
+	var num1 = 5;
+	var num2 = 10;
+	print("VARIABLES: ");
+	print(" f: " + f);
+	print(" t: " + t);
+	print(" num1 = " + num1);
+	print(" num2 = " + num2);
+	print("IF STATEMENTS");
+	print("--if (f)--");
+	if (f){
+		print("f is TRUE");
+	}
+	else{
+		print("f is FALSE");
+	}
+	print("--if (t)--");
+	if (t){
+		print("t is TRUE");
+	}
+	else{
+		print("t is FALSE");
+	}
+	print("--if (num1 < num2)--");
+	if (num1 < num2){
+		print("num1 < num2");
+	}
+	else{
+		print("num1 is NOT < num2");
+	}
+	print("--if (num1 > num2)--");
+	if (num1 > num2){
+		print("num1 < num2");
+	}
+	else{
+		print("num1 is NOT > num2");
+	}
+	print("--if (f AND t)--");
+	if (f AND t){
+		print("f AND t");
+	}
+	else{
+		print("NOT f AND t");
+	}
+	print("--if (f OR t)--");
+	if (f OR t){
+		print("f OR t");
+	}
+	else{
+		print("NOT f OR t");
+	}
+	print("--if (NOT f)--");
+	if (NOT f){
+		print("NOT f is TRUE (f is FALSE)");
+	}
+	else{
+		print("NOT f is FALSE (f is TRUE)");
+	}
+	print("--if (NOT t)--");
+	if (NOT t){
+		print("NOT t is TRUE (t is FALSE)");
+	}
+	else{
+		print("NOT t is FALSE (t is TRUE)");
+	}
+}

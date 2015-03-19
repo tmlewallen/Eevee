@@ -1,0 +1,33 @@
+var input = [1,2,2,3,3,3,4,4,4,4,"+"];
+Main.run(){
+	var len = length(input);
+	var operatorNdx = len - 1;
+	var operator = input[operatorNdx];
+	var result = 0;
+	var i = 0;
+	while (i < operatorNdx){
+		stack = input[i];
+		i = i + 1;
+	}
+	var isEmpty = stack = "empty";
+	while (isEmpty == FALSE){
+		if (operator == "+"){
+			result = result + stack = "pop";
+		}
+		if (operator == "-"){
+			result = result - stack = "pop";
+		}
+		if (operator == "/"){
+			result = result / stack = "pop";
+		}
+		if (operator == "*"){
+			result = result * stack = "pop";
+		}
+		if (operator == "^"){
+			result = result ^ stack = "pop";
+		}
+		print(result);
+		isEmpty = stack = "empty";
+	}
+
+}

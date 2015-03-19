@@ -1,0 +1,23 @@
+var arr = [1,2,3,4,5,6];
+var len = 6;
+
+Main.run(){
+	var i = 0;
+	while (i < len){
+		print(arr[i]);
+		i = i + 1;
+	}	
+	func printIndex(i){
+		print(arr[i]);
+	};
+
+	i = 0;
+	func printIndex2(){
+		print(arr[i]);
+		i = i + 1;
+	};
+	printNewLine();
+	forLoopPassIndex(0,len,1,printIndex);
+	printNewLine();
+	forLoop(0,len,1,printIndex2);
+}
