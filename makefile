@@ -1,5 +1,4 @@
 all: 
-	mkdir bin
 	javac src/*/*.java -d bin
 
 source-arrays: testPrograms/arrays.ev
@@ -39,4 +38,4 @@ lists: all
 	./eevee testPrograms/lists.ev
 
 clean:
-	rm -r bin
+	rm -r bin/*
