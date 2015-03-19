@@ -1,0 +1,34 @@
+var input = [1024,2,2,2,2,"/"];
+Main.run(){
+	var len = length(input);
+	var operatorNdx = len - 1;
+	var operator = input[operatorNdx];
+	var i = 0;
+	while (i < operatorNdx){
+		stack = input[i]; #stack is implemented in "main.lib"
+		i = i + 1;
+	}
+	var isEmpty = stack = "empty";
+	var result = stack = "pop";
+	print(result);
+	while (isEmpty == FALSE){
+		if (operator == "+"){
+			result = result + stack = "pop";
+		}
+		if (operator == "-"){
+			result = result - stack = "pop";
+		}
+		if (operator == "/"){
+			result = result / stack = "pop";
+		}
+		if (operator == "*"){
+			result = result * stack = "pop";
+		}
+		if (operator == "^"){
+			result = result ^ stack = "pop";
+		}
+		print(result);
+		isEmpty = stack = "empty";
+	}
+
+}

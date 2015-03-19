@@ -1,0 +1,103 @@
+Main.run(){
+	func cons(left,right){
+		func dispatch(option){
+			var returnVal = FALSE;
+			if (option == "left"){
+				returnVal = left;
+			}
+			else{
+				returnVal = right;
+			}
+			return returnVal;
+		};
+		return dispatch;
+	};
+
+	func car(list){
+		return list("left");
+	};
+
+	func cdr(list){
+		return list("right");
+	};
+
+	func print(value){
+		os p = value;
+		return value;
+	};
+
+	func printNewLine(){
+		os p = "";
+	}; 
+	#super hack-tastic stack implementation
+	var stack = FALSE{
+		var index = 0;
+		var size = 0;
+		var arr = [];
+		SET:func(option){ #when stack is on left of an equals sign this function is called, its only argument the value on the RIGHT of the equals sign
+			var returnVal = FALSE;
+			if (NOT option == "pop"){
+				if (NOT option == "empty"){ #if not "pop" or "empty", push the value on the stack
+					arr = arr + option;
+					size = size + 1;
+					returnVal = TRUE;
+				}
+				else{
+					returnVal = empty(); #if "empty", call "empty()"
+				}
+			}
+			else{
+				returnVal = pop(); #if "pop", call "pop()"
+			}
+			return returnVal;
+		};
+		func empty(){
+			var diff = size - index;
+			if (diff == 0){
+				diff = TRUE;
+			}
+			else{
+				diff = FALSE;
+			}
+			return diff;
+		},
+		func pop(){
+			var returnVal = FALSE;
+			var e = empty();
+			#print(e);
+			if (NOT e){
+				returnVal = arr[index];
+			}
+			index = index + 1;
+			return returnVal;		
+		}
+	};
+	
+	func forLoopPassIndex(start,end,delta,f){
+		#print(f);
+		while (start < end){
+			f(start);
+			start = start + delta;
+		}
+	};
+	
+	func forLoop(start,end,delta,f){
+		while (start < end){
+			f();
+			start = start + delta;
+		}
+	};
+	func intToStr(i){
+		return "" + i;
+	};
+
+	func length(arr){
+		var i = 0;
+		var temp = arr[i];
+		while (NOT temp == NULL){
+			i = i + 1;
+			temp = arr[i];
+		}
+		return i;
+	};
+}

@@ -1,0 +1,30 @@
+var stack = 0 {
+	var index = 0;
+	var length = 0;
+	var arr = [];
+	SET:func(option){
+		var returnVal = FALSE;
+		if (NOT option == "pop"){
+			#print = "NOT POP";
+			arr = arr + option;
+			length = length + 1;
+		}
+		else{
+			#print = "POP";
+			returnVal = pop();
+			#print = "returnVal = " + returnVal;
+		}
+		return returnVal;
+	};
+	func pop(){
+		var returnVal = FALSE;
+		if (length > 0){
+			if (index < length){
+				#print = "arr[index] = " + arr[index];
+				returnVal = arr[index];
+				index = index + 1;
+			}
+		}
+		return returnVal;
+	}
+};
