@@ -1,0 +1,30 @@
+KNOWN BUGS:
+
+-comparing functions... dunno about that
+-NO SHORT CIRCUITING
+-Non Boolean types are FALSE in boolean predicate functions (not comparisons)
+-Comparisons of different types (string and int) are false
+-Comparisons of Booleans types... should be true;
+-As of NOW, cant declare variables in While loops: Uses one environment. Fix would be recursive call of whileLoop();
+-FunctionCall = expr will set the var holding the function to expr... I think
+-Array index get/set is done in environment... probably shouldve done this in the parser/evaluator but for now it works
+-No operations on arrays besides get/set indices --Addition to array works like append
+-Function calls denoted by Lexeme.Type.OPAREN "(" and Arrays by Lexeme.Type.OBRACKET "[". Can change by changing what lexeme is added to parse tree when parsing each symbol (in place of OPAREN and OBRACKET)
+-No order of operations (left Associative)
+-No parentheses accepted in expressions
+-Override functions with incorrect numbers of arguments return errors on the line of the CALL
+-@ Denotes the EOF character
+-if returning, return statement must be last statement in a function.
+-Don't use GET override to change state of object, GET is called whenever the obj is in any expression. So it'll likely be called when you don't intend and change the state unexpectedly. 
+-Predicates do not take expressions
+-SET and GET overrides should always return something. returning null is undefined for the most part
+-functions cannot be define outside of MAIN
+-Main.loop is not implemented because these is no way to stop the loop as of now. 
+-No Break keyword for exiting loops (while (TRUE) will run forever...)
+-ONCHANGE override recognized but not implemented
+-No function overloading
+-Can't pass objects, only values
+-No return characters in strings
+-Indexing an array[length] returns NULL (but doesn't crash program!)
+
+

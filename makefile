@@ -1,4 +1,4 @@
-all: 
+all:
 	javac src/*/*.java -d bin
 
 source-arrays: testPrograms/arrays.ev
@@ -17,7 +17,7 @@ source-recursion: testPrograms/recursion.ev
 	cat testPrograms/recursion.ev
 
 recursion: all
-	./eevee rtestPrograms/ecursion.ev
+	./eevee testPrograms/recursion.ev
 
 source-iteration: testPrograms/iteration.ev
 	cat testPrograms/iteration.ev
